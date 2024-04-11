@@ -1,0 +1,44 @@
+{
+  "annotations": {
+    "changelogDate": "20240411122600"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "street",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "houseNo",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Address",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "cbCity",
+      "otherEntityRelationshipName": "address",
+      "relationshipName": "cbCity",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "cbCountry",
+      "otherEntityRelationshipName": "address",
+      "relationshipName": "cbCountry",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "applicant",
+      "otherEntityRelationshipName": "address",
+      "relationshipName": "applicant",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

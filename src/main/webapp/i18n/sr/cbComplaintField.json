@@ -1,0 +1,25 @@
+{
+  "complaintsDaApp": {
+    "cbComplaintField": {
+      "home": {
+        "title": "Cb Complaint Fields",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Kreiraj novi Cb Complaint Field",
+        "createOrEditLabel": "Kreirajte ili izmenite Cb Complaint Field",
+        "notFound": "No Cb Complaint Fields found"
+      },
+      "created": "Kreiran je novi Cb Complaint Field pod nazivom {{ param }}",
+      "updated": "Cb Complaint Field pod nazivom {{ param }} je ažuriran",
+      "deleted": "Cb Complaint Field pod nazivom {{ param }} je obrisan",
+      "delete": {
+        "question": "Da li ste sigurni da želite da obrišete Cb Complaint Field pod nazivom {{ id }}?"
+      },
+      "detail": {
+        "title": "Cb Complaint Field"
+      },
+      "id": "ID",
+      "complaintFieldName": "Complaint Field Name",
+      "complaint": "Complaint"
+    }
+  }
+}

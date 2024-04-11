@@ -1,0 +1,26 @@
+{
+  "complaintsDaApp": {
+    "cbComplaintPhase": {
+      "home": {
+        "title": "Cb Complaint Phases",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Kreiraj novi Cb Complaint Phase",
+        "createOrEditLabel": "Kreirajte ili izmenite Cb Complaint Phase",
+        "notFound": "No Cb Complaint Phases found"
+      },
+      "created": "Kreiran je novi Cb Complaint Phase pod nazivom {{ param }}",
+      "updated": "Cb Complaint Phase pod nazivom {{ param }} je ažuriran",
+      "deleted": "Cb Complaint Phase pod nazivom {{ param }} je obrisan",
+      "delete": {
+        "question": "Da li ste sigurni da želite da obrišete Cb Complaint Phase pod nazivom {{ id }}?"
+      },
+      "detail": {
+        "title": "Cb Complaint Phase"
+      },
+      "id": "ID",
+      "ordinalNo": "Ordinal No",
+      "complaintPhaseName": "Complaint Phase Name",
+      "complaint": "Complaint"
+    }
+  }
+}

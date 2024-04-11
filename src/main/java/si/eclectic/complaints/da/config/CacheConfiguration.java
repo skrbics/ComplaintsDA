@@ -50,6 +50,33 @@ public class CacheConfiguration {
             createCache(cm, si.eclectic.complaints.da.domain.User.class.getName());
             createCache(cm, si.eclectic.complaints.da.domain.Authority.class.getName());
             createCache(cm, si.eclectic.complaints.da.domain.User.class.getName() + ".authorities");
+            createCache(cm, si.eclectic.complaints.da.domain.Complaint.class.getName());
+            createCache(cm, si.eclectic.complaints.da.domain.Complaint.class.getName() + ".complaintAttachments");
+            createCache(cm, si.eclectic.complaints.da.domain.ComplaintAttachment.class.getName());
+            createCache(cm, si.eclectic.complaints.da.domain.Applicant.class.getName());
+            createCache(cm, si.eclectic.complaints.da.domain.Applicant.class.getName() + ".complaints");
+            createCache(cm, si.eclectic.complaints.da.domain.Operator.class.getName());
+            createCache(cm, si.eclectic.complaints.da.domain.Address.class.getName());
+            createCache(cm, si.eclectic.complaints.da.domain.CbComplaintPhase.class.getName());
+            createCache(cm, si.eclectic.complaints.da.domain.CbComplaintPhase.class.getName() + ".complaints");
+            createCache(cm, si.eclectic.complaints.da.domain.CbComplaintField.class.getName());
+            createCache(cm, si.eclectic.complaints.da.domain.CbComplaintField.class.getName() + ".complaints");
+            createCache(cm, si.eclectic.complaints.da.domain.CbComplaintSubField.class.getName());
+            createCache(cm, si.eclectic.complaints.da.domain.CbComplaintSubField.class.getName() + ".complaints");
+            createCache(cm, si.eclectic.complaints.da.domain.CbComplaintType.class.getName());
+            createCache(cm, si.eclectic.complaints.da.domain.CbComplaintType.class.getName() + ".complaints");
+            createCache(cm, si.eclectic.complaints.da.domain.CbComplaintChannel.class.getName());
+            createCache(cm, si.eclectic.complaints.da.domain.CbComplaintChannel.class.getName() + ".complaints");
+            createCache(cm, si.eclectic.complaints.da.domain.CbApplicantCapacityType.class.getName());
+            createCache(cm, si.eclectic.complaints.da.domain.CbApplicantCapacityType.class.getName() + ".complaints");
+            createCache(cm, si.eclectic.complaints.da.domain.CbLocation.class.getName());
+            createCache(cm, si.eclectic.complaints.da.domain.CbAttachmentType.class.getName());
+            createCache(cm, si.eclectic.complaints.da.domain.CbAttachmentType.class.getName() + ".complaintAttachments");
+            createCache(cm, si.eclectic.complaints.da.domain.CbCountry.class.getName());
+            createCache(cm, si.eclectic.complaints.da.domain.CbCountry.class.getName() + ".addresses");
+            createCache(cm, si.eclectic.complaints.da.domain.CbCity.class.getName());
+            createCache(cm, si.eclectic.complaints.da.domain.CbCity.class.getName() + ".addresses");
+            createCache(cm, si.eclectic.complaints.da.domain.CbCity.class.getName() + ".cbLocations");
             // jhipster-needle-ehcache-add-entry
         };
     }

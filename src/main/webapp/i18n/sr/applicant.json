@@ -1,0 +1,30 @@
+{
+  "complaintsDaApp": {
+    "applicant": {
+      "home": {
+        "title": "Applicants",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Kreiraj novi Applicant",
+        "createOrEditLabel": "Kreirajte ili izmenite Applicant",
+        "notFound": "No Applicants found"
+      },
+      "created": "Kreiran je novi Applicant pod nazivom {{ param }}",
+      "updated": "Applicant pod nazivom {{ param }} je ažuriran",
+      "deleted": "Applicant pod nazivom {{ param }} je obrisan",
+      "delete": {
+        "question": "Da li ste sigurni da želite da obrišete Applicant pod nazivom {{ id }}?"
+      },
+      "detail": {
+        "title": "Applicant"
+      },
+      "id": "ID",
+      "firstName": "First Name",
+      "middleName": "Middle Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Address",
+      "complaint": "Complaint"
+    }
+  }
+}

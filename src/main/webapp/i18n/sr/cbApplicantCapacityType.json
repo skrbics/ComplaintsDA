@@ -1,0 +1,25 @@
+{
+  "complaintsDaApp": {
+    "cbApplicantCapacityType": {
+      "home": {
+        "title": "Cb Applicant Capacity Types",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Kreiraj novi Cb Applicant Capacity Type",
+        "createOrEditLabel": "Kreirajte ili izmenite Cb Applicant Capacity Type",
+        "notFound": "No Cb Applicant Capacity Types found"
+      },
+      "created": "Kreiran je novi Cb Applicant Capacity Type pod nazivom {{ param }}",
+      "updated": "Cb Applicant Capacity Type pod nazivom {{ param }} je ažuriran",
+      "deleted": "Cb Applicant Capacity Type pod nazivom {{ param }} je obrisan",
+      "delete": {
+        "question": "Da li ste sigurni da želite da obrišete Cb Applicant Capacity Type pod nazivom {{ id }}?"
+      },
+      "detail": {
+        "title": "Cb Applicant Capacity Type"
+      },
+      "id": "ID",
+      "applicantCapacityTypeName": "Applicant Capacity Type Name",
+      "complaint": "Complaint"
+    }
+  }
+}

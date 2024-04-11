@@ -17,7 +17,27 @@
     <property name="datetimeType" value="datetime" dbms="postgresql"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240411122556_added_entity_Complaint.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240411122557_added_entity_ComplaintAttachment.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240411122558_added_entity_Applicant.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240411122559_added_entity_Operator.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240411122600_added_entity_Address.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240411122601_added_entity_CbComplaintPhase.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240411122602_added_entity_CbComplaintField.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240411122603_added_entity_CbComplaintSubField.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240411122604_added_entity_CbComplaintType.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240411122605_added_entity_CbComplaintChannel.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240411122606_added_entity_CbApplicantCapacityType.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240411122607_added_entity_CbLocation.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240411122608_added_entity_CbAttachmentType.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240411122609_added_entity_CbCountry.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240411122610_added_entity_CbCity.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20240411122556_added_entity_constraints_Complaint.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240411122557_added_entity_constraints_ComplaintAttachment.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240411122558_added_entity_constraints_Applicant.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240411122600_added_entity_constraints_Address.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240411122607_added_entity_constraints_CbLocation.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
 </databaseChangeLog>

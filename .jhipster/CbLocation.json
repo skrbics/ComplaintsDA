@@ -1,0 +1,26 @@
+{
+  "annotations": {
+    "changelogDate": "20240411122607"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "locationName",
+      "fieldType": "String"
+    }
+  ],
+  "name": "CbLocation",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "cbCity",
+      "otherEntityRelationshipName": "cbLocation",
+      "relationshipName": "cbCity",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

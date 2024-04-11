@@ -1,0 +1,28 @@
+{
+  "complaintsDaApp": {
+    "complaintAttachment": {
+      "home": {
+        "title": "Complaint Attachments",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Complaint Attachment",
+        "createOrEditLabel": "Create or edit a Complaint Attachment",
+        "notFound": "No Complaint Attachments found"
+      },
+      "created": "A new Complaint Attachment is created with identifier {{ param }}",
+      "updated": "A Complaint Attachment is updated with identifier {{ param }}",
+      "deleted": "A Complaint Attachment is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Complaint Attachment {{ id }}?"
+      },
+      "detail": {
+        "title": "Complaint Attachment"
+      },
+      "id": "ID",
+      "ordinalNo": "Ordinal No",
+      "name": "Name",
+      "path": "Path",
+      "complaint": "Complaint",
+      "cbAttachmentType": "Cb Attachment Type"
+    }
+  }
+}

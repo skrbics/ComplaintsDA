@@ -1,0 +1,110 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (complaint()) {
+      <div>
+        <h2 data-cy="complaintDetailsHeading"><span jhiTranslate="complaintsDaApp.complaint.detail.title">Complaint</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ complaint()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="complaintsDaApp.complaint.complaintText">Complaint Text</span></dt>
+          <dd>
+            <span>{{ complaint()!.complaintText }}</span>
+          </dd>
+          <dt><span jhiTranslate="complaintsDaApp.complaint.dateAndTime">Date And Time</span></dt>
+          <dd>
+            <span>{{ complaint()!.dateAndTime | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span jhiTranslate="complaintsDaApp.complaint.writtenReplyBySMS">Written Reply By SMS</span></dt>
+          <dd>
+            <span>{{ complaint()!.writtenReplyBySMS }}</span>
+          </dd>
+          <dt><span jhiTranslate="complaintsDaApp.complaint.applicant">Applicant</span></dt>
+          <dd>
+            @if (complaint()!.applicant) {
+              <div>
+                <a [routerLink]="['/applicant', complaint()!.applicant?.id, 'view']">{{ complaint()!.applicant?.id }}</a>
+              </div>
+            }
+          </dd>
+          <dt><span jhiTranslate="complaintsDaApp.complaint.cbComplaintField">Cb Complaint Field</span></dt>
+          <dd>
+            @if (complaint()!.cbComplaintField) {
+              <div>
+                <a [routerLink]="['/cb-complaint-field', complaint()!.cbComplaintField?.id, 'view']">{{
+                  complaint()!.cbComplaintField?.id
+                }}</a>
+              </div>
+            }
+          </dd>
+          <dt><span jhiTranslate="complaintsDaApp.complaint.cbComplaintSubField">Cb Complaint Sub Field</span></dt>
+          <dd>
+            @if (complaint()!.cbComplaintSubField) {
+              <div>
+                <a [routerLink]="['/cb-complaint-sub-field', complaint()!.cbComplaintSubField?.id, 'view']">{{
+                  complaint()!.cbComplaintSubField?.id
+                }}</a>
+              </div>
+            }
+          </dd>
+          <dt><span jhiTranslate="complaintsDaApp.complaint.cbComplaintType">Cb Complaint Type</span></dt>
+          <dd>
+            @if (complaint()!.cbComplaintType) {
+              <div>
+                <a [routerLink]="['/cb-complaint-type', complaint()!.cbComplaintType?.id, 'view']">{{
+                  complaint()!.cbComplaintType?.id
+                }}</a>
+              </div>
+            }
+          </dd>
+          <dt><span jhiTranslate="complaintsDaApp.complaint.cbComplaintChannel">Cb Complaint Channel</span></dt>
+          <dd>
+            @if (complaint()!.cbComplaintChannel) {
+              <div>
+                <a [routerLink]="['/cb-complaint-channel', complaint()!.cbComplaintChannel?.id, 'view']">{{
+                  complaint()!.cbComplaintChannel?.id
+                }}</a>
+              </div>
+            }
+          </dd>
+          <dt><span jhiTranslate="complaintsDaApp.complaint.cbApplicantCapacityType">Cb Applicant Capacity Type</span></dt>
+          <dd>
+            @if (complaint()!.cbApplicantCapacityType) {
+              <div>
+                <a [routerLink]="['/cb-applicant-capacity-type', complaint()!.cbApplicantCapacityType?.id, 'view']">{{
+                  complaint()!.cbApplicantCapacityType?.id
+                }}</a>
+              </div>
+            }
+          </dd>
+          <dt><span jhiTranslate="complaintsDaApp.complaint.cbComplaintPhase">Cb Complaint Phase</span></dt>
+          <dd>
+            @if (complaint()!.cbComplaintPhase) {
+              <div>
+                <a [routerLink]="['/cb-complaint-phase', complaint()!.cbComplaintPhase?.id, 'view']">{{
+                  complaint()!.cbComplaintPhase?.id
+                }}</a>
+              </div>
+            }
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/complaint', complaint()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

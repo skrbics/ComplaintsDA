@@ -1,0 +1,64 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (complaintAttachment()) {
+      <div>
+        <h2 data-cy="complaintAttachmentDetailsHeading">
+          <span jhiTranslate="complaintsDaApp.complaintAttachment.detail.title">Complaint Attachment</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ complaintAttachment()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="complaintsDaApp.complaintAttachment.ordinalNo">Ordinal No</span></dt>
+          <dd>
+            <span>{{ complaintAttachment()!.ordinalNo }}</span>
+          </dd>
+          <dt><span jhiTranslate="complaintsDaApp.complaintAttachment.name">Name</span></dt>
+          <dd>
+            <span>{{ complaintAttachment()!.name }}</span>
+          </dd>
+          <dt><span jhiTranslate="complaintsDaApp.complaintAttachment.path">Path</span></dt>
+          <dd>
+            <span>{{ complaintAttachment()!.path }}</span>
+          </dd>
+          <dt><span jhiTranslate="complaintsDaApp.complaintAttachment.complaint">Complaint</span></dt>
+          <dd>
+            @if (complaintAttachment()!.complaint) {
+              <div>
+                <a [routerLink]="['/complaint', complaintAttachment()!.complaint?.id, 'view']">{{
+                  complaintAttachment()!.complaint?.id
+                }}</a>
+              </div>
+            }
+          </dd>
+          <dt><span jhiTranslate="complaintsDaApp.complaintAttachment.cbAttachmentType">Cb Attachment Type</span></dt>
+          <dd>
+            @if (complaintAttachment()!.cbAttachmentType) {
+              <div>
+                <a [routerLink]="['/cb-attachment-type', complaintAttachment()!.cbAttachmentType?.id, 'view']">{{
+                  complaintAttachment()!.cbAttachmentType?.id
+                }}</a>
+              </div>
+            }
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/complaint-attachment', complaintAttachment()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

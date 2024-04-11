@@ -1,0 +1,25 @@
+{
+  "complaintsDaApp": {
+    "cbComplaintChannel": {
+      "home": {
+        "title": "Cb Complaint Channels",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Cb Complaint Channel",
+        "createOrEditLabel": "Create or edit a Cb Complaint Channel",
+        "notFound": "No Cb Complaint Channels found"
+      },
+      "created": "A new Cb Complaint Channel is created with identifier {{ param }}",
+      "updated": "A Cb Complaint Channel is updated with identifier {{ param }}",
+      "deleted": "A Cb Complaint Channel is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Cb Complaint Channel {{ id }}?"
+      },
+      "detail": {
+        "title": "Cb Complaint Channel"
+      },
+      "id": "ID",
+      "complaintChannelName": "Complaint Channel Name",
+      "complaint": "Complaint"
+    }
+  }
+}

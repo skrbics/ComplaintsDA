@@ -8,7 +8,21 @@
       "entities": {
         "main": "Entiteti",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)",
-        "adminAuthority": "Authority"
+        "complaint": "Complaint",
+        "complaintAttachment": "Complaint Attachment",
+        "applicant": "Applicant",
+        "operator": "Operator",
+        "address": "Address",
+        "cbComplaintPhase": "Cb Complaint Phase",
+        "cbComplaintField": "Cb Complaint Field",
+        "cbComplaintSubField": "Cb Complaint Sub Field",
+        "cbComplaintType": "Cb Complaint Type",
+        "cbComplaintChannel": "Cb Complaint Channel",
+        "cbApplicantCapacityType": "Cb Applicant Capacity Type",
+        "cbLocation": "Cb Location",
+        "cbAttachmentType": "Cb Attachment Type",
+        "cbCountry": "Cb Country",
+        "cbCity": "Cb City"
       },
       "account": {
         "main": "Profil",

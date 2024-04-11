@@ -1,0 +1,107 @@
+entity Complaint {
+  complaintText String
+  dateAndTime ZonedDateTime
+  writtenReplyBySMS Boolean
+  writtenReplyBySMS Boolean
+}
+
+entity ComplaintAttachment {
+  ordinalNo Integer
+  name String
+  path String
+}
+
+entity Applicant {
+  firstName String
+  middleName String
+  lastName String
+  email String
+  phone String
+}
+
+entity Operator {
+  firstName String
+  middleName String
+  lastName String
+  email String
+  phone String
+}
+
+entity Address {
+  street String
+  houseNo String
+}
+
+entity CbComplaintPhase {
+	ordinalNo Integer
+    complaintPhaseName String
+}
+entity CbComplaintField {
+  complaintFieldName String
+}
+
+entity CbComplaintSubField {
+  complaintSubFieldName String
+}
+
+entity CbComplaintType {
+  complaintTypeName String
+}
+
+entity CbComplaintChannel {
+  complaintChannelName String
+}
+
+entity CbApplicantCapacityType {
+  applicantCapacityTypeName String
+}
+
+entity CbLocation {
+  locationName String
+}
+
+entity CbAttachmentType {
+  name String
+  extension String
+}
+
+entity CbCountry {
+  name String
+  abbreviation String
+}
+
+entity CbCity {
+  name String
+  zip String
+}
+
+relationship ManyToOne {
+    Complaint to Applicant
+    Complaint to CbComplaintField
+    Complaint to CbComplaintSubField
+    Complaint to CbComplaintType
+    Complaint to CbComplaintChannel
+    Complaint to CbApplicantCapacityType
+    Complaint to CbComplaintPhase
+    ComplaintAttachment to Complaint
+    ComplaintAttachment to CbAttachmentType
+    Address to CbCity
+    Address to CbCountry
+    CbLocation to CbCity
+}
+
+relationship OneToOne {
+	Applicant to Address
+}
+
+// Set pagination options
+paginate CbLocation, CbCity, Complaint, Operator, Applicant, Address, CbCountry, ComplaintAttachment, CbComplaintPhase, CbAttachmentType, CbApplicantCapacityType, CbComplaintChannel, CbComplaintType, CbComplaintSubField, CbComplaintField with pagination
+
+// Use Data Transfer Objects (DTO)
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+
+// Set an angular suffix
+// angularSuffix * with mySuffix

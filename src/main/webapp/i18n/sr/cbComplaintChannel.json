@@ -1,0 +1,25 @@
+{
+  "complaintsDaApp": {
+    "cbComplaintChannel": {
+      "home": {
+        "title": "Cb Complaint Channels",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Kreiraj novi Cb Complaint Channel",
+        "createOrEditLabel": "Kreirajte ili izmenite Cb Complaint Channel",
+        "notFound": "No Cb Complaint Channels found"
+      },
+      "created": "Kreiran je novi Cb Complaint Channel pod nazivom {{ param }}",
+      "updated": "Cb Complaint Channel pod nazivom {{ param }} je ažuriran",
+      "deleted": "Cb Complaint Channel pod nazivom {{ param }} je obrisan",
+      "delete": {
+        "question": "Da li ste sigurni da želite da obrišete Cb Complaint Channel pod nazivom {{ id }}?"
+      },
+      "detail": {
+        "title": "Cb Complaint Channel"
+      },
+      "id": "ID",
+      "complaintChannelName": "Complaint Channel Name",
+      "complaint": "Complaint"
+    }
+  }
+}

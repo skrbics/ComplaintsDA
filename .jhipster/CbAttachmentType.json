@@ -1,0 +1,30 @@
+{
+  "annotations": {
+    "changelogDate": "20240411122608"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "extension",
+      "fieldType": "String"
+    }
+  ],
+  "name": "CbAttachmentType",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "complaintAttachment",
+      "otherEntityRelationshipName": "cbAttachmentType",
+      "relationshipName": "complaintAttachment",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

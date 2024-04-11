@@ -1,0 +1,26 @@
+{
+  "complaintsDaApp": {
+    "cbCountry": {
+      "home": {
+        "title": "Cb Countries",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Kreiraj novi Cb Country",
+        "createOrEditLabel": "Kreirajte ili izmenite Cb Country",
+        "notFound": "No Cb Countries found"
+      },
+      "created": "Kreiran je novi Cb Country pod nazivom {{ param }}",
+      "updated": "Cb Country pod nazivom {{ param }} je ažuriran",
+      "deleted": "Cb Country pod nazivom {{ param }} je obrisan",
+      "delete": {
+        "question": "Da li ste sigurni da želite da obrišete Cb Country pod nazivom {{ id }}?"
+      },
+      "detail": {
+        "title": "Cb Country"
+      },
+      "id": "ID",
+      "name": "Name",
+      "abbreviation": "Abbreviation",
+      "address": "Address"
+    }
+  }
+}
