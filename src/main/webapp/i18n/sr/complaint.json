@@ -1,0 +1,34 @@
+{
+  "complaintsDaApp": {
+    "complaint": {
+      "home": {
+        "title": "Complaints",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Kreiraj novi Complaint",
+        "createOrEditLabel": "Kreirajte ili izmenite Complaint",
+        "notFound": "No Complaints found"
+      },
+      "created": "Kreiran je novi Complaint pod nazivom {{ param }}",
+      "updated": "Complaint pod nazivom {{ param }} je ažuriran",
+      "deleted": "Complaint pod nazivom {{ param }} je obrisan",
+      "delete": {
+        "question": "Da li ste sigurni da želite da obrišete Complaint pod nazivom {{ id }}?"
+      },
+      "detail": {
+        "title": "Complaint"
+      },
+      "id": "ID",
+      "complaintText": "Complaint Text",
+      "dateAndTime": "Date And Time",
+      "writtenReplyBySMS": "Written Reply By SMS",
+      "applicant": "Applicant",
+      "cbComplaintField": "Cb Complaint Field",
+      "cbComplaintSubField": "Cb Complaint Sub Field",
+      "cbComplaintType": "Cb Complaint Type",
+      "cbComplaintChannel": "Cb Complaint Channel",
+      "cbApplicantCapacityType": "Cb Applicant Capacity Type",
+      "cbComplaintPhase": "Cb Complaint Phase",
+      "complaintAttachment": "Complaint Attachment"
+    }
+  }
+}

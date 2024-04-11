@@ -1,0 +1,26 @@
+{
+  "complaintsDaApp": {
+    "cbComplaintPhase": {
+      "home": {
+        "title": "Cb Complaint Phases",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Cb Complaint Phase",
+        "createOrEditLabel": "Create or edit a Cb Complaint Phase",
+        "notFound": "No Cb Complaint Phases found"
+      },
+      "created": "A new Cb Complaint Phase is created with identifier {{ param }}",
+      "updated": "A Cb Complaint Phase is updated with identifier {{ param }}",
+      "deleted": "A Cb Complaint Phase is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Cb Complaint Phase {{ id }}?"
+      },
+      "detail": {
+        "title": "Cb Complaint Phase"
+      },
+      "id": "ID",
+      "ordinalNo": "Ordinal No",
+      "complaintPhaseName": "Complaint Phase Name",
+      "complaint": "Complaint"
+    }
+  }
+}

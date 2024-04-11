@@ -1,0 +1,26 @@
+{
+  "annotations": {
+    "changelogDate": "20240411122606"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "applicantCapacityTypeName",
+      "fieldType": "String"
+    }
+  ],
+  "name": "CbApplicantCapacityType",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "complaint",
+      "otherEntityRelationshipName": "cbApplicantCapacityType",
+      "relationshipName": "complaint",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

@@ -1,0 +1,25 @@
+{
+  "complaintsDaApp": {
+    "cbComplaintType": {
+      "home": {
+        "title": "Cb Complaint Types",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Cb Complaint Type",
+        "createOrEditLabel": "Create or edit a Cb Complaint Type",
+        "notFound": "No Cb Complaint Types found"
+      },
+      "created": "A new Cb Complaint Type is created with identifier {{ param }}",
+      "updated": "A Cb Complaint Type is updated with identifier {{ param }}",
+      "deleted": "A Cb Complaint Type is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Cb Complaint Type {{ id }}?"
+      },
+      "detail": {
+        "title": "Cb Complaint Type"
+      },
+      "id": "ID",
+      "complaintTypeName": "Complaint Type Name",
+      "complaint": "Complaint"
+    }
+  }
+}

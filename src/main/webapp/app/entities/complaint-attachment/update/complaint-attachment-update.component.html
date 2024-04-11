@@ -1,0 +1,91 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-complaint-attachment-heading"
+        data-cy="ComplaintAttachmentCreateUpdateHeading"
+        jhiTranslate="complaintsDaApp.complaintAttachment.home.createOrEditLabel"
+      >
+        Create or edit a Complaint Attachment
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="complaintsDaApp.complaintAttachment.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_ordinalNo" jhiTranslate="complaintsDaApp.complaintAttachment.ordinalNo">Ordinal No</label>
+          <input type="number" class="form-control" name="ordinalNo" id="field_ordinalNo" data-cy="ordinalNo" formControlName="ordinalNo" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_name" jhiTranslate="complaintsDaApp.complaintAttachment.name">Name</label>
+          <input type="text" class="form-control" name="name" id="field_name" data-cy="name" formControlName="name" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_path" jhiTranslate="complaintsDaApp.complaintAttachment.path">Path</label>
+          <input type="text" class="form-control" name="path" id="field_path" data-cy="path" formControlName="path" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_complaint" jhiTranslate="complaintsDaApp.complaintAttachment.complaint">Complaint</label>
+          <select
+            class="form-control"
+            id="field_complaint"
+            data-cy="complaint"
+            name="complaint"
+            formControlName="complaint"
+            [compareWith]="compareComplaint"
+          >
+            <option [ngValue]="null"></option>
+            @for (complaintOption of complaintsSharedCollection; track $index) {
+              <option [ngValue]="complaintOption">{{ complaintOption.id }}</option>
+            }
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_cbAttachmentType" jhiTranslate="complaintsDaApp.complaintAttachment.cbAttachmentType"
+            >Cb Attachment Type</label
+          >
+          <select
+            class="form-control"
+            id="field_cbAttachmentType"
+            data-cy="cbAttachmentType"
+            name="cbAttachmentType"
+            formControlName="cbAttachmentType"
+            [compareWith]="compareCbAttachmentType"
+          >
+            <option [ngValue]="null"></option>
+            @for (cbAttachmentTypeOption of cbAttachmentTypesSharedCollection; track $index) {
+              <option [ngValue]="cbAttachmentTypeOption">{{ cbAttachmentTypeOption.id }}</option>
+            }
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

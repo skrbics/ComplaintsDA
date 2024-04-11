@@ -1,0 +1,28 @@
+{
+  "complaintsDaApp": {
+    "operator": {
+      "home": {
+        "title": "Operators",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Kreiraj novi Operator",
+        "createOrEditLabel": "Kreirajte ili izmenite Operator",
+        "notFound": "No Operators found"
+      },
+      "created": "Kreiran je novi Operator pod nazivom {{ param }}",
+      "updated": "Operator pod nazivom {{ param }} je ažuriran",
+      "deleted": "Operator pod nazivom {{ param }} je obrisan",
+      "delete": {
+        "question": "Da li ste sigurni da želite da obrišete Operator pod nazivom {{ id }}?"
+      },
+      "detail": {
+        "title": "Operator"
+      },
+      "id": "ID",
+      "firstName": "First Name",
+      "middleName": "Middle Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "phone": "Phone"
+    }
+  }
+}

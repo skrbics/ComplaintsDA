@@ -1,0 +1,25 @@
+{
+  "complaintsDaApp": {
+    "cbApplicantCapacityType": {
+      "home": {
+        "title": "Cb Applicant Capacity Types",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Cb Applicant Capacity Type",
+        "createOrEditLabel": "Create or edit a Cb Applicant Capacity Type",
+        "notFound": "No Cb Applicant Capacity Types found"
+      },
+      "created": "A new Cb Applicant Capacity Type is created with identifier {{ param }}",
+      "updated": "A Cb Applicant Capacity Type is updated with identifier {{ param }}",
+      "deleted": "A Cb Applicant Capacity Type is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Cb Applicant Capacity Type {{ id }}?"
+      },
+      "detail": {
+        "title": "Cb Applicant Capacity Type"
+      },
+      "id": "ID",
+      "applicantCapacityTypeName": "Applicant Capacity Type Name",
+      "complaint": "Complaint"
+    }
+  }
+}

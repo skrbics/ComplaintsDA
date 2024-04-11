@@ -1,0 +1,218 @@
+<div>
+  <h2 id="page-heading" data-cy="ComplaintHeading">
+    <span jhiTranslate="complaintsDaApp.complaint.home.title">Complaints</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span jhiTranslate="complaintsDaApp.complaint.home.refreshListLabel">Refresh list</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-complaint"
+        [routerLink]="['/complaint/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="complaintsDaApp.complaint.home.createLabel">Create a new Complaint</span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  @if (complaints?.length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="complaintsDaApp.complaint.home.notFound">No Complaints found</span>
+    </div>
+  }
+
+  @if (complaints && complaints.length > 0) {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [sortState]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">ID</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="complaintText">
+              <div class="d-flex">
+                <span jhiTranslate="complaintsDaApp.complaint.complaintText">Complaint Text</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="dateAndTime">
+              <div class="d-flex">
+                <span jhiTranslate="complaintsDaApp.complaint.dateAndTime">Date And Time</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="writtenReplyBySMS">
+              <div class="d-flex">
+                <span jhiTranslate="complaintsDaApp.complaint.writtenReplyBySMS">Written Reply By SMS</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="applicant.id">
+              <div class="d-flex">
+                <span jhiTranslate="complaintsDaApp.complaint.applicant">Applicant</span>
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="cbComplaintField.id">
+              <div class="d-flex">
+                <span jhiTranslate="complaintsDaApp.complaint.cbComplaintField">Cb Complaint Field</span>
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="cbComplaintSubField.id">
+              <div class="d-flex">
+                <span jhiTranslate="complaintsDaApp.complaint.cbComplaintSubField">Cb Complaint Sub Field</span>
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="cbComplaintType.id">
+              <div class="d-flex">
+                <span jhiTranslate="complaintsDaApp.complaint.cbComplaintType">Cb Complaint Type</span>
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="cbComplaintChannel.id">
+              <div class="d-flex">
+                <span jhiTranslate="complaintsDaApp.complaint.cbComplaintChannel">Cb Complaint Channel</span>
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="cbApplicantCapacityType.id">
+              <div class="d-flex">
+                <span jhiTranslate="complaintsDaApp.complaint.cbApplicantCapacityType">Cb Applicant Capacity Type</span>
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="cbComplaintPhase.id">
+              <div class="d-flex">
+                <span jhiTranslate="complaintsDaApp.complaint.cbComplaintPhase">Cb Complaint Phase</span>
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (complaint of complaints; track trackId) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/complaint', complaint.id, 'view']">{{ complaint.id }}</a>
+              </td>
+              <td>{{ complaint.complaintText }}</td>
+              <td>{{ complaint.dateAndTime | formatMediumDatetime }}</td>
+              <td>{{ complaint.writtenReplyBySMS }}</td>
+              <td>
+                @if (complaint.applicant) {
+                  <div>
+                    <a [routerLink]="['/applicant', complaint.applicant.id, 'view']">{{ complaint.applicant.id }}</a>
+                  </div>
+                }
+              </td>
+              <td>
+                @if (complaint.cbComplaintField) {
+                  <div>
+                    <a [routerLink]="['/cb-complaint-field', complaint.cbComplaintField.id, 'view']">{{ complaint.cbComplaintField.id }}</a>
+                  </div>
+                }
+              </td>
+              <td>
+                @if (complaint.cbComplaintSubField) {
+                  <div>
+                    <a [routerLink]="['/cb-complaint-sub-field', complaint.cbComplaintSubField.id, 'view']">{{
+                      complaint.cbComplaintSubField.id
+                    }}</a>
+                  </div>
+                }
+              </td>
+              <td>
+                @if (complaint.cbComplaintType) {
+                  <div>
+                    <a [routerLink]="['/cb-complaint-type', complaint.cbComplaintType.id, 'view']">{{ complaint.cbComplaintType.id }}</a>
+                  </div>
+                }
+              </td>
+              <td>
+                @if (complaint.cbComplaintChannel) {
+                  <div>
+                    <a [routerLink]="['/cb-complaint-channel', complaint.cbComplaintChannel.id, 'view']">{{
+                      complaint.cbComplaintChannel.id
+                    }}</a>
+                  </div>
+                }
+              </td>
+              <td>
+                @if (complaint.cbApplicantCapacityType) {
+                  <div>
+                    <a [routerLink]="['/cb-applicant-capacity-type', complaint.cbApplicantCapacityType.id, 'view']">{{
+                      complaint.cbApplicantCapacityType.id
+                    }}</a>
+                  </div>
+                }
+              </td>
+              <td>
+                @if (complaint.cbComplaintPhase) {
+                  <div>
+                    <a [routerLink]="['/cb-complaint-phase', complaint.cbComplaintPhase.id, 'view']">{{ complaint.cbComplaintPhase.id }}</a>
+                  </div>
+                }
+              </td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a [routerLink]="['/complaint', complaint.id, 'view']" class="btn btn-info btn-sm" data-cy="entityDetailsButton">
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                  </a>
+
+                  <a [routerLink]="['/complaint', complaint.id, 'edit']" class="btn btn-primary btn-sm" data-cy="entityEditButton">
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                  </a>
+
+                  <button type="submit" (click)="delete(complaint)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+  @if (complaints && complaints.length > 0) {
+    <div>
+      <div class="d-flex justify-content-center">
+        <jhi-item-count [params]="{ page: page, totalItems: totalItems, itemsPerPage: itemsPerPage }"></jhi-item-count>
+      </div>
+
+      <div class="d-flex justify-content-center">
+        <ngb-pagination
+          [collectionSize]="totalItems"
+          [page]="page"
+          [pageSize]="itemsPerPage"
+          [maxSize]="5"
+          [rotate]="true"
+          [boundaryLinks]="true"
+          (pageChange)="navigateToPage($event)"
+        ></ngb-pagination>
+      </div>
+    </div>
+  }
+</div>

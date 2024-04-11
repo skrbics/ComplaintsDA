@@ -1,0 +1,69 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-cb-location-heading"
+        data-cy="CbLocationCreateUpdateHeading"
+        jhiTranslate="complaintsDaApp.cbLocation.home.createOrEditLabel"
+      >
+        Create or edit a Cb Location
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="complaintsDaApp.cbLocation.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_locationName" jhiTranslate="complaintsDaApp.cbLocation.locationName">Location Name</label>
+          <input
+            type="text"
+            class="form-control"
+            name="locationName"
+            id="field_locationName"
+            data-cy="locationName"
+            formControlName="locationName"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_cbCity" jhiTranslate="complaintsDaApp.cbLocation.cbCity">Cb City</label>
+          <select
+            class="form-control"
+            id="field_cbCity"
+            data-cy="cbCity"
+            name="cbCity"
+            formControlName="cbCity"
+            [compareWith]="compareCbCity"
+          >
+            <option [ngValue]="null"></option>
+            @for (cbCityOption of cbCitiesSharedCollection; track $index) {
+              <option [ngValue]="cbCityOption">{{ cbCityOption.id }}</option>
+            }
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

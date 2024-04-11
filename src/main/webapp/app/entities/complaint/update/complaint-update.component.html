@@ -1,0 +1,208 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-complaint-heading" data-cy="ComplaintCreateUpdateHeading" jhiTranslate="complaintsDaApp.complaint.home.createOrEditLabel">
+        Create or edit a Complaint
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="complaintsDaApp.complaint.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_complaintText" jhiTranslate="complaintsDaApp.complaint.complaintText">Complaint Text</label>
+          <input
+            type="text"
+            class="form-control"
+            name="complaintText"
+            id="field_complaintText"
+            data-cy="complaintText"
+            formControlName="complaintText"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_dateAndTime" jhiTranslate="complaintsDaApp.complaint.dateAndTime">Date And Time</label>
+          <div class="d-flex">
+            <input
+              id="field_dateAndTime"
+              data-cy="dateAndTime"
+              type="datetime-local"
+              class="form-control"
+              name="dateAndTime"
+              formControlName="dateAndTime"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_writtenReplyBySMS" jhiTranslate="complaintsDaApp.complaint.writtenReplyBySMS"
+            >Written Reply By SMS</label
+          >
+          <input
+            type="checkbox"
+            class="form-check"
+            name="writtenReplyBySMS"
+            id="field_writtenReplyBySMS"
+            data-cy="writtenReplyBySMS"
+            formControlName="writtenReplyBySMS"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_applicant" jhiTranslate="complaintsDaApp.complaint.applicant">Applicant</label>
+          <select
+            class="form-control"
+            id="field_applicant"
+            data-cy="applicant"
+            name="applicant"
+            formControlName="applicant"
+            [compareWith]="compareApplicant"
+          >
+            <option [ngValue]="null"></option>
+            @for (applicantOption of applicantsSharedCollection; track $index) {
+              <option [ngValue]="applicantOption">{{ applicantOption.id }}</option>
+            }
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_cbComplaintField" jhiTranslate="complaintsDaApp.complaint.cbComplaintField"
+            >Cb Complaint Field</label
+          >
+          <select
+            class="form-control"
+            id="field_cbComplaintField"
+            data-cy="cbComplaintField"
+            name="cbComplaintField"
+            formControlName="cbComplaintField"
+            [compareWith]="compareCbComplaintField"
+          >
+            <option [ngValue]="null"></option>
+            @for (cbComplaintFieldOption of cbComplaintFieldsSharedCollection; track $index) {
+              <option [ngValue]="cbComplaintFieldOption">{{ cbComplaintFieldOption.id }}</option>
+            }
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_cbComplaintSubField" jhiTranslate="complaintsDaApp.complaint.cbComplaintSubField"
+            >Cb Complaint Sub Field</label
+          >
+          <select
+            class="form-control"
+            id="field_cbComplaintSubField"
+            data-cy="cbComplaintSubField"
+            name="cbComplaintSubField"
+            formControlName="cbComplaintSubField"
+            [compareWith]="compareCbComplaintSubField"
+          >
+            <option [ngValue]="null"></option>
+            @for (cbComplaintSubFieldOption of cbComplaintSubFieldsSharedCollection; track $index) {
+              <option [ngValue]="cbComplaintSubFieldOption">{{ cbComplaintSubFieldOption.id }}</option>
+            }
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_cbComplaintType" jhiTranslate="complaintsDaApp.complaint.cbComplaintType"
+            >Cb Complaint Type</label
+          >
+          <select
+            class="form-control"
+            id="field_cbComplaintType"
+            data-cy="cbComplaintType"
+            name="cbComplaintType"
+            formControlName="cbComplaintType"
+            [compareWith]="compareCbComplaintType"
+          >
+            <option [ngValue]="null"></option>
+            @for (cbComplaintTypeOption of cbComplaintTypesSharedCollection; track $index) {
+              <option [ngValue]="cbComplaintTypeOption">{{ cbComplaintTypeOption.id }}</option>
+            }
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_cbComplaintChannel" jhiTranslate="complaintsDaApp.complaint.cbComplaintChannel"
+            >Cb Complaint Channel</label
+          >
+          <select
+            class="form-control"
+            id="field_cbComplaintChannel"
+            data-cy="cbComplaintChannel"
+            name="cbComplaintChannel"
+            formControlName="cbComplaintChannel"
+            [compareWith]="compareCbComplaintChannel"
+          >
+            <option [ngValue]="null"></option>
+            @for (cbComplaintChannelOption of cbComplaintChannelsSharedCollection; track $index) {
+              <option [ngValue]="cbComplaintChannelOption">{{ cbComplaintChannelOption.id }}</option>
+            }
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_cbApplicantCapacityType" jhiTranslate="complaintsDaApp.complaint.cbApplicantCapacityType"
+            >Cb Applicant Capacity Type</label
+          >
+          <select
+            class="form-control"
+            id="field_cbApplicantCapacityType"
+            data-cy="cbApplicantCapacityType"
+            name="cbApplicantCapacityType"
+            formControlName="cbApplicantCapacityType"
+            [compareWith]="compareCbApplicantCapacityType"
+          >
+            <option [ngValue]="null"></option>
+            @for (cbApplicantCapacityTypeOption of cbApplicantCapacityTypesSharedCollection; track $index) {
+              <option [ngValue]="cbApplicantCapacityTypeOption">{{ cbApplicantCapacityTypeOption.id }}</option>
+            }
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_cbComplaintPhase" jhiTranslate="complaintsDaApp.complaint.cbComplaintPhase"
+            >Cb Complaint Phase</label
+          >
+          <select
+            class="form-control"
+            id="field_cbComplaintPhase"
+            data-cy="cbComplaintPhase"
+            name="cbComplaintPhase"
+            formControlName="cbComplaintPhase"
+            [compareWith]="compareCbComplaintPhase"
+          >
+            <option [ngValue]="null"></option>
+            @for (cbComplaintPhaseOption of cbComplaintPhasesSharedCollection; track $index) {
+              <option [ngValue]="cbComplaintPhaseOption">{{ cbComplaintPhaseOption.id }}</option>
+            }
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

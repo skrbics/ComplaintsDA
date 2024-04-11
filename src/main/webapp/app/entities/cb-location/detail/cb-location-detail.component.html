@@ -1,0 +1,42 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (cbLocation()) {
+      <div>
+        <h2 data-cy="cbLocationDetailsHeading"><span jhiTranslate="complaintsDaApp.cbLocation.detail.title">Cb Location</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ cbLocation()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="complaintsDaApp.cbLocation.locationName">Location Name</span></dt>
+          <dd>
+            <span>{{ cbLocation()!.locationName }}</span>
+          </dd>
+          <dt><span jhiTranslate="complaintsDaApp.cbLocation.cbCity">Cb City</span></dt>
+          <dd>
+            @if (cbLocation()!.cbCity) {
+              <div>
+                <a [routerLink]="['/cb-city', cbLocation()!.cbCity?.id, 'view']">{{ cbLocation()!.cbCity?.id }}</a>
+              </div>
+            }
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/cb-location', cbLocation()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

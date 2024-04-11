@@ -1,0 +1,36 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (cbComplaintField()) {
+      <div>
+        <h2 data-cy="cbComplaintFieldDetailsHeading">
+          <span jhiTranslate="complaintsDaApp.cbComplaintField.detail.title">Cb Complaint Field</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ cbComplaintField()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="complaintsDaApp.cbComplaintField.complaintFieldName">Complaint Field Name</span></dt>
+          <dd>
+            <span>{{ cbComplaintField()!.complaintFieldName }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/cb-complaint-field', cbComplaintField()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <!--
+        Added the constraints for entity Complaint.
+    -->
+    <changeSet id="20240411122556-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="applicant_id"
+                                 baseTableName="complaint"
+                                 constraintName="fk_complaint__applicant_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="applicant"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="cb_complaint_field_id"
+                                 baseTableName="complaint"
+                                 constraintName="fk_complaint__cb_complaint_field_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="cb_complaint_field"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="cb_complaint_sub_field_id"
+                                 baseTableName="complaint"
+                                 constraintName="fk_complaint__cb_complaint_sub_field_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="cb_complaint_sub_field"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="cb_complaint_type_id"
+                                 baseTableName="complaint"
+                                 constraintName="fk_complaint__cb_complaint_type_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="cb_complaint_type"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="cb_complaint_channel_id"
+                                 baseTableName="complaint"
+                                 constraintName="fk_complaint__cb_complaint_channel_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="cb_complaint_channel"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="cb_applicant_capacity_type_id"
+                                 baseTableName="complaint"
+                                 constraintName="fk_complaint__cb_applicant_capacity_type_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="cb_applicant_capacity_type"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="cb_complaint_phase_id"
+                                 baseTableName="complaint"
+                                 constraintName="fk_complaint__cb_complaint_phase_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="cb_complaint_phase"
+                                 />
+    </changeSet>
+</databaseChangeLog>

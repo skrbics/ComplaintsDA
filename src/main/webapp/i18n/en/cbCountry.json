@@ -1,0 +1,26 @@
+{
+  "complaintsDaApp": {
+    "cbCountry": {
+      "home": {
+        "title": "Cb Countries",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Cb Country",
+        "createOrEditLabel": "Create or edit a Cb Country",
+        "notFound": "No Cb Countries found"
+      },
+      "created": "A new Cb Country is created with identifier {{ param }}",
+      "updated": "A Cb Country is updated with identifier {{ param }}",
+      "deleted": "A Cb Country is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Cb Country {{ id }}?"
+      },
+      "detail": {
+        "title": "Cb Country"
+      },
+      "id": "ID",
+      "name": "Name",
+      "abbreviation": "Abbreviation",
+      "address": "Address"
+    }
+  }
+}

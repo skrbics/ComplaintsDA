@@ -1,0 +1,25 @@
+{
+  "complaintsDaApp": {
+    "cbComplaintField": {
+      "home": {
+        "title": "Cb Complaint Fields",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Cb Complaint Field",
+        "createOrEditLabel": "Create or edit a Cb Complaint Field",
+        "notFound": "No Cb Complaint Fields found"
+      },
+      "created": "A new Cb Complaint Field is created with identifier {{ param }}",
+      "updated": "A Cb Complaint Field is updated with identifier {{ param }}",
+      "deleted": "A Cb Complaint Field is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Cb Complaint Field {{ id }}?"
+      },
+      "detail": {
+        "title": "Cb Complaint Field"
+      },
+      "id": "ID",
+      "complaintFieldName": "Complaint Field Name",
+      "complaint": "Complaint"
+    }
+  }
+}

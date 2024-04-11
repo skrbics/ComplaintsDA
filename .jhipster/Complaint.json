@@ -1,0 +1,83 @@
+{
+  "annotations": {
+    "changelogDate": "20240411122556"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "complaintText",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dateAndTime",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "writtenReplyBySMS",
+      "fieldType": "Boolean"
+    }
+  ],
+  "name": "Complaint",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "applicant",
+      "otherEntityRelationshipName": "complaint",
+      "relationshipName": "applicant",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "cbComplaintField",
+      "otherEntityRelationshipName": "complaint",
+      "relationshipName": "cbComplaintField",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "cbComplaintSubField",
+      "otherEntityRelationshipName": "complaint",
+      "relationshipName": "cbComplaintSubField",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "cbComplaintType",
+      "otherEntityRelationshipName": "complaint",
+      "relationshipName": "cbComplaintType",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "cbComplaintChannel",
+      "otherEntityRelationshipName": "complaint",
+      "relationshipName": "cbComplaintChannel",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "cbApplicantCapacityType",
+      "otherEntityRelationshipName": "complaint",
+      "relationshipName": "cbApplicantCapacityType",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "cbComplaintPhase",
+      "otherEntityRelationshipName": "complaint",
+      "relationshipName": "cbComplaintPhase",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "complaintAttachment",
+      "otherEntityRelationshipName": "complaint",
+      "relationshipName": "complaintAttachment",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

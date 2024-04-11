@@ -1,0 +1,25 @@
+{
+  "complaintsDaApp": {
+    "cbComplaintType": {
+      "home": {
+        "title": "Cb Complaint Types",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Kreiraj novi Cb Complaint Type",
+        "createOrEditLabel": "Kreirajte ili izmenite Cb Complaint Type",
+        "notFound": "No Cb Complaint Types found"
+      },
+      "created": "Kreiran je novi Cb Complaint Type pod nazivom {{ param }}",
+      "updated": "Cb Complaint Type pod nazivom {{ param }} je ažuriran",
+      "deleted": "Cb Complaint Type pod nazivom {{ param }} je obrisan",
+      "delete": {
+        "question": "Da li ste sigurni da želite da obrišete Cb Complaint Type pod nazivom {{ id }}?"
+      },
+      "detail": {
+        "title": "Cb Complaint Type"
+      },
+      "id": "ID",
+      "complaintTypeName": "Complaint Type Name",
+      "complaint": "Complaint"
+    }
+  }
+}

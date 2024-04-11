@@ -1,0 +1,26 @@
+{
+  "complaintsDaApp": {
+    "cbAttachmentType": {
+      "home": {
+        "title": "Cb Attachment Types",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Cb Attachment Type",
+        "createOrEditLabel": "Create or edit a Cb Attachment Type",
+        "notFound": "No Cb Attachment Types found"
+      },
+      "created": "A new Cb Attachment Type is created with identifier {{ param }}",
+      "updated": "A Cb Attachment Type is updated with identifier {{ param }}",
+      "deleted": "A Cb Attachment Type is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Cb Attachment Type {{ id }}?"
+      },
+      "detail": {
+        "title": "Cb Attachment Type"
+      },
+      "id": "ID",
+      "name": "Name",
+      "extension": "Extension",
+      "complaintAttachment": "Complaint Attachment"
+    }
+  }
+}

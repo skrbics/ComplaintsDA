@@ -1,0 +1,41 @@
+{
+  "annotations": {
+    "changelogDate": "20240411122557"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "ordinalNo",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "path",
+      "fieldType": "String"
+    }
+  ],
+  "name": "ComplaintAttachment",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "complaint",
+      "otherEntityRelationshipName": "complaintAttachment",
+      "relationshipName": "complaint",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "cbAttachmentType",
+      "otherEntityRelationshipName": "complaintAttachment",
+      "relationshipName": "cbAttachmentType",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

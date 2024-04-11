@@ -1,0 +1,34 @@
+{
+  "complaintsDaApp": {
+    "complaint": {
+      "home": {
+        "title": "Complaints",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Complaint",
+        "createOrEditLabel": "Create or edit a Complaint",
+        "notFound": "No Complaints found"
+      },
+      "created": "A new Complaint is created with identifier {{ param }}",
+      "updated": "A Complaint is updated with identifier {{ param }}",
+      "deleted": "A Complaint is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Complaint {{ id }}?"
+      },
+      "detail": {
+        "title": "Complaint"
+      },
+      "id": "ID",
+      "complaintText": "Complaint Text",
+      "dateAndTime": "Date And Time",
+      "writtenReplyBySMS": "Written Reply By SMS",
+      "applicant": "Applicant",
+      "cbComplaintField": "Cb Complaint Field",
+      "cbComplaintSubField": "Cb Complaint Sub Field",
+      "cbComplaintType": "Cb Complaint Type",
+      "cbComplaintChannel": "Cb Complaint Channel",
+      "cbApplicantCapacityType": "Cb Applicant Capacity Type",
+      "cbComplaintPhase": "Cb Complaint Phase",
+      "complaintAttachment": "Complaint Attachment"
+    }
+  }
+}

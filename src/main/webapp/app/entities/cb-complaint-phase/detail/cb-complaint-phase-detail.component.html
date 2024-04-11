@@ -1,0 +1,40 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (cbComplaintPhase()) {
+      <div>
+        <h2 data-cy="cbComplaintPhaseDetailsHeading">
+          <span jhiTranslate="complaintsDaApp.cbComplaintPhase.detail.title">Cb Complaint Phase</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ cbComplaintPhase()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="complaintsDaApp.cbComplaintPhase.ordinalNo">Ordinal No</span></dt>
+          <dd>
+            <span>{{ cbComplaintPhase()!.ordinalNo }}</span>
+          </dd>
+          <dt><span jhiTranslate="complaintsDaApp.cbComplaintPhase.complaintPhaseName">Complaint Phase Name</span></dt>
+          <dd>
+            <span>{{ cbComplaintPhase()!.complaintPhaseName }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/cb-complaint-phase', cbComplaintPhase()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>
